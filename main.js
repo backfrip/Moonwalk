@@ -1,11 +1,18 @@
-var test = document.getElementById('test');
-test.addEventListener('click', rotate);
-var i = 0;
+var NAMESPACE = 'http://www.w3.org/2000/svg'
+var svg = document.getElementById('screen');
 
-function rotate(e) {
-  e.preventDefault();
-  test.setAttribute('transform', 'rotate(' + i + ',' +
-    (parseInt(test.getAttribute('x')) + parseInt(test.getAttribute('width')) / 2) + ',' +
-    (parseInt(test.getAttribute('y')) + parseInt(test.getAttribute('height')) / 2) + ')');
-  i += 45;
+populate();
+
+function populate() {
+  makeTile();
+}
+
+function makeTile() {
+  var use = document.createElementNS(NAMESPACE, 'use');
+  use.setAttribute('x', 100);
+  use.setAttribute('y', 100);
+  use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#tile');
+  console.log(use);
+  console.log(document.getElementById('tile'));
+  svg.appendChild(use);
 }
