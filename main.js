@@ -1,4 +1,3 @@
-var NAMESPACE = 'http://www.w3.org/2000/svg'
 var svg = document.getElementById('screen');
 
 populate();
@@ -13,11 +12,11 @@ function populate() {
 }
 
 function makeTile(x, y, transform) {
-  var use = document.createElementNS(NAMESPACE, 'use');
+  var use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
   use.setAttribute('x', x);
   use.setAttribute('y', y);
   use.setAttribute('transform', transform);
-  use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#tile');
+  use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#tile1');
   use.addEventListener('click', turnTile);
   return use;
 }

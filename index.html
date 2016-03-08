@@ -8,11 +8,19 @@
   <h2>(Yet)</h2>
   <svg id="screen" height="500" width="500" style="border: 1px solid;">
   </svg>
-  <svg id="holder" height="100" width="100" style="border: 1px dashed;">
+  <svg id="holder" height="175" width="100" style="border: 1px dashed;">
     <svg x="25" y="25">
-      <g id="tile">
+      <g id="tile0">
         <rect stroke="black" fill="blue" x="0" y="0" width="50" height="50"></rect>  
-        <circle fill="red" cx="25" cy="12" r="12"></circle>
+        <path d="M 10 1 v 48 h 30 v -48 z"
+          fill="cyan" stroke="purple" stroke-width="2"></path>
+      </g>
+    </svg>
+    <svg x="25" y="100">
+      <g id="tile1">
+        <rect stroke="black" fill="blue" x="0" y="0" width="50" height="50"></rect>  
+        <path d="M 10 1 S 10 40 50 40 v -30 S 40 10 40 1 z"
+          fill="cyan" stroke="purple" stroke-width="2"></path>
       </g>
     </svg>
   </svg>
