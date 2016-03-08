@@ -9,11 +9,12 @@
   <svg id="screen" height="500" width="500" style="border: 1px solid;">
   </svg>
   <svg id="holder" height="100" width="100" style="border: 1px dashed;">
-    <g id="tile" transform="translate(25, 25)">
-      <rect fill="blue" x="0" y="0" width="50" height="50"></rect>  
-      <circle fill="red" cx="25" cy="12" r="12"></circle>
-    </g>
-    
+    <svg x="25" y="25">
+      <g id="tile">
+        <rect stroke="black" fill="blue" x="0" y="0" width="50" height="50"></rect>  
+        <circle fill="red" cx="25" cy="12" r="12"></circle>
+      </g>
+    </svg>
   </svg>
   <script src="./main.js"></script>
 </body>
